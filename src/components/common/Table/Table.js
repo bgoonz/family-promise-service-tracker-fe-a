@@ -77,11 +77,11 @@ const TableComponent = ({
   };
 
   const selectRole = role => {
-    return role === 'Administrator'
+    return role === 1
       ? 'Administrator'
-      : role === 'Program Manager'
+      : role === 2
       ? 'Program Manager'
-      : role === 'service_provider'
+      : role === 3
       ? 'Service Provider'
       : role === 'unassigned'
       ? 'None'
@@ -101,8 +101,8 @@ const TableComponent = ({
           key: employee.provider_id,
           firstName: employee.provider_first_name,
           lastName: employee.provider_last_name,
-          role: selectRole(employee.role),
-          programs: programs,
+          role: selectRole(employee.provider_role_id),
+          programs: programsArray,
         });
       });
     }
