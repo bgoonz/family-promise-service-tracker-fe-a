@@ -91,10 +91,10 @@ const TableComponent = ({
   const userObjCreator = () => {
     if (employees) {
       employees.forEach(employee => {
-        const programs = [];
-        employee.programs.forEach(program => {
+        const programsArray = [];
+        programs.forEach(program => {
           if (program !== null) {
-            programs.push(program.program_name);
+            programsArray.push(program.program_name);
           }
         });
         tableData.push({
