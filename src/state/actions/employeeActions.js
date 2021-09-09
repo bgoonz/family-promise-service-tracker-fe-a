@@ -67,19 +67,21 @@ export const addEmployeeAction = employeeObj => dispatch => {
   axiosWithAuth()
     .post(`/api/providers`, employeeObj)
     .then(res => {
+      console.log('EMPLOYEE ACTIONS: EMPLOYEEOBJ:', employeeObj);
       dispatch({ type: ADD_EMPLOYEE_SUCCESS, payload: res.data });
     })
     .catch(err => {
       dispatch({ type: ADD_EMPLOYEE_FAIL, payload: err.message });
+      console.log('EMPLOYEE ACTIONS--.catch: EMPLOYEEOBJ:', employeeObj);
     })
     .finally(() => {
       dispatch({ type: ADD_EMPLOYEE_RESOLVE });
+      console.log('EMPLOYEE ACTIONS: EMPLOYEEOBJ--.finally:', employeeObj);
     });
 };
 
 export const editEmployeeAction = (employeeId, employeeObj) => dispatch => {
   dispatch({ type: EDIT_EMPLOYEE_START });
-
   axiosWithAuth()
     .put(`/api/providers/${employeeId}`, employeeObj)
     .then(res => {

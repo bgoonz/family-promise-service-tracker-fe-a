@@ -20,6 +20,7 @@ function RenderRecipientsPage({
   const [householdVisible, setHouseholdVisible] = useState(false);
 
   const onCreate = recipientObj => {
+    console.log('renderRecipientsPage.js: recipientObj:', recipientObj);
     addRecipientAction(recipientObj);
     setVisible(false);
   };

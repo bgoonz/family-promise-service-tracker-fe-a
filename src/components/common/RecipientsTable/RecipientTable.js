@@ -116,10 +116,16 @@ const RecipientTable = ({
     deleteRecipientAction(key);
   };
 
-  const save = async recipientId => {
+  const save = (recipientId, values) => {
     try {
-      const recipientObj = await form.validateFields();
-      editRecipientAction(recipientId, recipientObj);
+      // const recipientObj = {
+      //   recipient_first_name: 'Test',
+      //   recipient_last_name: 'Test',
+      // };
+      console.log('renderRecipientsPage.js: recipientObj:', values);
+      editRecipientAction(recipientId, values);
+      console.log('RECIPIENTtABLE: values:', values);
+
       setEditingKey('');
     } catch (errInfo) {
       console.log('Validate Failed:', errInfo);
@@ -336,7 +342,8 @@ const RecipientTable = ({
     <div style={{}}>
       <EditRecipientForm
         visible={editing}
-        onCreate={() => {
+        onCreate={values => {
+          save('182f535f-9f7d-4f86-b75f-4d13d7e61bb1', values);
           alert('This is submited');
         }}
         onCancel={() => {
