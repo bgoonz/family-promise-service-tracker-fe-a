@@ -16,7 +16,6 @@ function RenderEmployeePage({ addEmployeeAction, user }) {
   const onCreate = employeeObj => {
     addEmployeeAction(employeeObj);
     setVisible(false);
-    console.log('EMPLOYEE OBJ:', employeeObj);
   };
 
   return (

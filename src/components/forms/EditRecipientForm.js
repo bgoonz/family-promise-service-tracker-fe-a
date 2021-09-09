@@ -22,7 +22,6 @@ function EditRecipientForm({ visible, onCreate, onCancel, households }) {
           form
             .validateFields()
             .then(values => {
-              console.log('VALUES', values);
               onCreate(values);
               form.resetFields();
             })
