@@ -122,6 +122,7 @@ const RecipientTable = ({
       //   recipient_first_name: 'Test',
       //   recipient_last_name: 'Test',
       // };
+      console.log(key);
       console.log('renderRecipientsPage.js: recipientObj:', values);
       editRecipientAction(recipientId, values);
       console.log('RECIPIENTtABLE: values:', values);
@@ -344,6 +345,7 @@ const RecipientTable = ({
         visible={editing}
         onCreate={values => {
           save('182f535f-9f7d-4f86-b75f-4d13d7e61bb1', values);
+          console.log('RECIPIENTS:', recipients);
           alert('This is submited');
         }}
         onCancel={() => {
