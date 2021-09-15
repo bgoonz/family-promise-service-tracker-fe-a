@@ -48,7 +48,9 @@ function AddServiceTypeForm({ onCreate, onCancel, visible, programs }) {
             .validateFields()
             .then(values => {
               form.resetFields();
+              console.log('VALUES1', values);
               onCreate(values);
+              console.log('VALUES2', values);
             })
             .catch(info => {
               console.log('Validate Failed:', info);
@@ -64,7 +66,7 @@ function AddServiceTypeForm({ onCreate, onCancel, visible, programs }) {
           }}
         >
           <Form.Item
-            name="name"
+            name="service_type_name"
             label="Service Name"
             rules={[
               {
@@ -75,7 +77,7 @@ function AddServiceTypeForm({ onCreate, onCancel, visible, programs }) {
           >
             <Input size="large" placeholder="Enter Name" />
           </Form.Item>
-          <Form.Item
+          {/* <Form.Item
             name="program_id"
             label="Program"
             rules={[
@@ -92,9 +94,12 @@ function AddServiceTypeForm({ onCreate, onCancel, visible, programs }) {
                 </Select.Option>
               ))}
             </Select>
-          </Form.Item>
+          </Form.Item> */}
 
-          <Form.Item label="Service Description" name="description">
+          <Form.Item
+            label="Service Description"
+            name="service_type_description"
+          >
             <Input.TextArea
               placeholder="Enter Details..."
               showCount
@@ -102,14 +107,14 @@ function AddServiceTypeForm({ onCreate, onCancel, visible, programs }) {
             />
           </Form.Item>
           {/* <button onClick={}>Add a custom Service Field</button> */}
-          <Dropdown name="dropdown_custom" overlay={menu} trigger={['click']}>
+          {/* <Dropdown name="dropdown_custom" overlay={menu} trigger={['click']}>
             <a
               className="custom_dropdown_selector"
               onClick={e => e.preventDefault()}
             >
               Add A Custom Service Field <DownOutlined />
             </a>
-          </Dropdown>
+          </Dropdown> */}
 
           {dropDownValue === 'Number' ? <CC_NumberInput /> : <></>}
           {/* // Add these in and build this out in the forms>CustomizableComponents folder */}
