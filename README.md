@@ -19,8 +19,7 @@ You can find the deployed project at [a.familypromiseservicetracker.dev/](a.fami
 ![https://reactjs.org](https://img.shields.io/badge/react-v16.13.1-blue)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
-- Fork and clone the repo to install it as your own remote.
-  - **note** please [be sure to set your remote](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/) for this repo to point to your Labs Team Front End Repository.
+- Clone **DO NOT FORK** the repo.
 - run: `npm install` to download all dependencies.
 - run: `npm start` to start your local development server.
 
@@ -35,20 +34,7 @@ You can find the deployed project at [a.familypromiseservicetracker.dev/](a.fami
 
 #### Front end deployed to AWS Amplify.
 
-#### [Back end](https://github.com/Lambda-School-Labs/family-promise-service-tracker-be-a) built using:
-
-#### Node.js with Postgres
-
-- point one
-- point two
-- point three
-
-# Installation Instructions
-
-create your project repo by forking or using this as a template.
-run: `npm install` to download all dependencies.
-run: `npm start` to start the live server. Note: must be running on localhost:3000
-g
+#### [Back end](https://github.com/Lambda-School-Labs/family-promise-service-tracker-be-a) built using: Node.js with Postgres
 
 # Contributing
 
